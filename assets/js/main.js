@@ -24,6 +24,9 @@
         4 + 1 = 0
  */
 
+// selected pic screen
+const bigScreen = document.getElementById('main_view');
+
 // tumbnails
 const tumb1 = document.getElementById('tumb_1');
 const tumb2 = document.getElementById('tumb_2');
@@ -32,7 +35,7 @@ const tumb4 = document.getElementById('tumb_4');
 const tumb5 = document.getElementById('tumb_5');
 
 
-let index = 1;
+let index = 2;
 console.log(index);
 
 // arrow buttons (Up & Down)
@@ -62,6 +65,10 @@ if (index = 1) {
     tumb3.classList.remove('selected');
     tumb4.classList.remove('selected');
     tumb5.classList.remove('selected');
+
+    const selectedPic = `<h1 class=" viewed_picture">foto 1</h1>`;
+
+        bigScreen.innerHTML = selectedPic;
 }
 else if (index = 2) {
     tumb2.classList.add('selected');

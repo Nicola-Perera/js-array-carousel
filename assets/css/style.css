@@ -20,6 +20,9 @@
 }
 
 /* common rules */
+.selected {
+    background-color: cornflowerblue;
+}
 .row {
     height: 100%;
     display: flex;
