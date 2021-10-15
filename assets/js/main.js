@@ -24,10 +24,18 @@
         4 + 1 = 0
  */
 
+// tumbnails
+const tumb1 = document.getElementById('tumb_1');
+const tumb2 = document.getElementById('tumb_2');
+const tumb3 = document.getElementById('tumb_3');
+const tumb4 = document.getElementById('tumb_4');
+const tumb5 = document.getElementById('tumb_5');
+
 
 let index = 1;
 console.log(index);
 
+// arrow buttons (Up & Down)
 const buttonUp = document.getElementById('arrow_up');
 const buttonDown = document.getElementById('arrow_down');
 
@@ -47,4 +55,40 @@ buttonDown.addEventListener('click', function() {
     console.log(index);
 })
 
+// status selected
+if (index = 1) {
+    tumb1.classList.add('selected');
+    tumb2.classList.remove('selected');
+    tumb3.classList.remove('selected');
+    tumb4.classList.remove('selected');
+    tumb5.classList.remove('selected');
+}
+else if (index = 2) {
+    tumb2.classList.add('selected');
+    tumb1.classList.remove('selected');
+    tumb3.classList.remove('selected');
+    tumb4.classList.remove('selected');
+    tumb5.classList.remove('selected');
 
+}
+else if (index = 3) {
+    tumb3.classList.add('selected');
+    tumb1.classList.remove('selected');
+    tumb2.classList.remove('selected');
+    tumb4.classList.remove('selected');
+    tumb5.classList.remove('selected');
+}
+else if (index = 4) {
+    tumb4.classList.add('selected');
+    tumb1.classList.remove('selected');
+    tumb2.classList.remove('selected');
+    tumb3.classList.remove('selected');
+    tumb5.classList.remove('selected');
+}
+else if (index = 5) {
+    tumb5.classList.add('selected');
+    tumb1.classList.remove('selected');
+    tumb2.classList.remove('selected');
+    tumb3.classList.remove('selected');
+    tumb4.classList.remove('selected');
+}
