@@ -24,19 +24,29 @@
         4 + 1 = 0
  */
 
-// selected pic screen
-const bigScreen = document.getElementById('main_view');
+const items = [
+    'img/01.jpg',
+    'img/02.jpg',
+    'img/03.jpg',
+    'img/04.jpg',
+    'img/05.jpg'
+];
 
-// tumbnails
-const tumb1 = document.getElementById('tumb_1');
-const tumb2 = document.getElementById('tumb_2');
-const tumb3 = document.getElementById('tumb_3');
-const tumb4 = document.getElementById('tumb_4');
-const tumb5 = document.getElementById('tumb_5');
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+];
 
-
-let index = 4;
-console.log(index);
+const text = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+];      
 
 // arrow buttons (Up & Down)
 const buttonUp = document.getElementById('arrow_up');
@@ -52,22 +62,11 @@ buttonUp.addEventListener('click', function() {
 
     if (index == 1) {
     
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb1.classList.add('selected');
-    
         const selectedPic = `<h1 class=" viewed_picture">foto 1</h1>`;
     
             bigScreen.innerHTML = selectedPic;
     }
     else if (index == 2) {
-        tumb1.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb2.classList.add('selected');
     
         const selectedPic = `<h1 class=" viewed_picture">foto 2</h1>`;
     
@@ -75,25 +74,13 @@ buttonUp.addEventListener('click', function() {
     
     }
     else if (index == 3) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb3.classList.add('selected');
+        
     }
     else if (index == 4) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb4.classList.add('selected');
+        
     }
     else if (index == 5) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.add('selected');
+        
     }
     
 })
@@ -106,22 +93,11 @@ buttonDown.addEventListener('click', function() {
 
     if (index == 1) {
     
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb1.classList.add('selected');
-    
         const selectedPic = `<h1 class=" viewed_picture">foto 1</h1>`;
     
             bigScreen.innerHTML = selectedPic;
     }
     else if (index == 2) {
-        tumb1.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb2.classList.add('selected');
     
         const selectedPic = `<h1 class=" viewed_picture">foto 2</h1>`;
     
@@ -129,27 +105,54 @@ buttonDown.addEventListener('click', function() {
     
     }
     else if (index == 3) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb3.classList.add('selected');
+        
     }
     else if (index == 4) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb5.classList.remove('selected');
-        tumb4.classList.add('selected');
+        
     }
     else if (index == 5) {
-        tumb1.classList.remove('selected');
-        tumb2.classList.remove('selected');
-        tumb3.classList.remove('selected');
-        tumb4.classList.remove('selected');
-        tumb5.classList.add('selected');
+        
     }
     
 })
+
+// selected pic screen
+const bigScreen = document.getElementById('main_view');
+
+// tumbnails
+const tumbnails = document.getElementById('tumbnails');
+
+
+let bigPic;
+let tumb;
+let index = 1;
+console.log(index);
+
+for (let i = 0; i < items.length; i++) {
+    bigPic += `
+                <div class"bigPic">
+                    <img src="${items[i]}">
+                    <div class="text">
+                        <h3>${title[i]}</h3>
+                        <p>${text[i]}</p>
+                    </div>
+                </div>
+               `;
+    tumb += `
+                <div class="tumb">
+                    <img src="${items[i]}">
+                </div>
+            `
+}
+
+bigScreen.innerHTML = bigPic;
+document.getElementsByClassName('bigPic').classList.add('selected');
+
+tumbnails.innerHTML = tumb;
+document.getElementsByClassName('tumb')[index].classList.add('selected');
+
+
+
+
 
 // status selected
