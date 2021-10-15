@@ -1,0 +1,52 @@
+/* reset rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* debug rules */
+.debug #carousel {
+    background-color: aqua;
+}
+.debug #main_view {
+    background-color: blue;
+}
+.debug #tumbnails {
+    background-color: brown;
+}
+.debug #tumb_2 {
+    background-color: chartreuse;
+}
+
+/* common rules */
+.row {
+    height: 100%;
+    display: flex;
+}
+
+
+/* carousel */
+#carousel {
+    width: 70%;
+    height: 350px;
+    margin: 7rem auto;
+}
+
+/* main view */
+#main_view {
+    width: 85%;
+    height: 100%;
+}
+
+/* tumbnails */
+#tumbnails {
+    width: 15%;
+    height: 100%;
+}
+
+/* tumbnail */
+.tumbnail {
+    width: 100%;
+    height: calc(100% / 5);
+}
