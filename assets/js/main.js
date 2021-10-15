@@ -25,19 +25,26 @@
  */
 
 
-let index = 2;
+let index = 1;
+console.log(index);
 
 const buttonUp = document.getElementById('arrow_up');
 const buttonDown = document.getElementById('arrow_down');
 
 buttonUp.addEventListener('click', function() {
     index += 1;
+    if (index = 6) {
+        index = 1;
+    }
+    
     console.log(index);
 })
 buttonDown.addEventListener('click', function() {
     index -= 1;
+    if (index = 0) {
+        index = 5;
+    }
     console.log(index);
 })
-
 
 
