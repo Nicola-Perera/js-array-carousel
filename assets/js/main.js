@@ -24,9 +24,20 @@
         4 + 1 = 0
  */
 
-const index = [0,1,2,3,4];
-const indexSelector = index[0]; 
+
+let index = 2;
 
 const buttonUp = document.getElementById('arrow_up');
 const buttonDown = document.getElementById('arrow_down');
+
+buttonUp.addEventListener('click', function() {
+    index += 1;
+    console.log(index);
+})
+buttonDown.addEventListener('click', function() {
+    index -= 1;
+    console.log(index);
+})
+
+
 
