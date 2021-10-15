@@ -23,3 +23,7 @@
         0 -1 = 4
         4 + 1 = 0
  */
+
+const buttonUp = document.getElementById('arrow_up');
+const buttonDown = document.getElementById('arrow_down');
+

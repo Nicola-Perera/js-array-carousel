@@ -33,10 +33,10 @@
     height: 35px;
     border-radius: 2rem;
 }
-.arrow_up {
+#arrow_up {
     top: 10px;
 }
-.arrow_down {
+#arrow_down {
     bottom: 10px;
 }
 
