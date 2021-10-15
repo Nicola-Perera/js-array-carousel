@@ -24,6 +24,9 @@
         4 + 1 = 0
  */
 
+const index = [0,1,2,3,4];
+const indexSelector = index[0]; 
+
 const buttonUp = document.getElementById('arrow_up');
 const buttonDown = document.getElementById('arrow_down');
 
