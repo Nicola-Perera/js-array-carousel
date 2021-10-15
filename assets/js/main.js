@@ -77,6 +77,10 @@ else if (index = 2) {
     tumb4.classList.remove('selected');
     tumb5.classList.remove('selected');
 
+    const selectedPic = `<h1 class=" viewed_picture">foto 2</h1>`;
+
+        bigScreen.innerHTML = selectedPic;
+
 }
 else if (index = 3) {
     tumb3.classList.add('selected');
